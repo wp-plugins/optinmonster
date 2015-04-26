@@ -1,5 +1,5 @@
 === OptinMonster - WordPress Popup Plugin & Optin Form Solution ===
-Contributors: griffinjt
+Contributors: griffinjt, smub
 Tags: wordpress popup, popup, wordpress, wordpress popup form, lightbox, lightbox popup, wordpress popups, popups, lightbox popups, optin form, wordpress optin form, sidebar optin form, sidebar optin, sidebar form, wordpress overlay popup, wordpress popup plugin, popup plugin, wordpress lightbox optin, wordpress lightbox optin form, after post optin form, wordpress after post optin form, after post optin form plugin, lightbox popup plugin, wordpress popup solution, exit intent, exit-intent, optinmonster, optin monster, optin-monster, mobile popup, mobile popups, mobile optin forms, mobile optins, lightbox optins, wordpress mobile popup, wordpress mobile popups, wordpress mobile optin forms, wordpress lightbox optins
 Requires at least: 3.5.1
 Tested up to: 4.1.2
