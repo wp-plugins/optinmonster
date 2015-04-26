@@ -78,7 +78,7 @@ You can try different content, headlines, layouts, styles, and opt-in triggers, 
 
 = Detailed Conversion Analytics = 
 
-Most people don't know what to do with analytics because they don't understand them. OptinMonster's <a href="http://optinmonster.com/features/conversion-analytics/" rel="friend" title=conversion analytics">conversion analytics</a> is easy to understand and give you the stats that matter, so you can take action to improve your lead-generation strategy.
+Most people don't know what to do with analytics because they don't understand them. OptinMonster's <a href="http://optinmonster.com/features/conversion-analytics/" rel="friend" title=“conversion analytics">conversion analytics</a> is easy to understand and give you the stats that matter, so you can take action to improve your lead-generation strategy.
 
 = MonsterLinks&trade; - 2 Step Opt-in Technology = 
 
