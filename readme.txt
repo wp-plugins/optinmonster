@@ -12,7 +12,7 @@ OptinMonster helps you grow your email list by converting visitors into subscrib
 
 Did you know that over 70% of website visitors who leave your website will never return? Why? Because most people find your blog, read, and leave (that's just a natural pattern). Wouldn't it be nice if you can convert some of those people to subscribe to your blog? That's where <a href="http://optinmonster.com" rel="friend" title="OptinMonster">OptinMonster</a> can help. OptinMonster helps you grow your email list and get more subscribers.
 
-OptinMonster comes with an easy to use form builder that allows you to create beautiful optin forms that are proven to convert. You can create various type of optins including WordPress popups, floating header and footer bars, slide-ins also known as scroll triggered boxes, sidebar forms, after post forms, in-line forms, mobile-specific forms, and more.  
+OptinMonster comes with an easy to use form builder that allows you to create beautiful optin forms that are proven to convert. You can create various type of optins including WordPress popups, floating header and footer bars, slide-ins also known as scroll triggered boxes, sidebar forms, after post forms, in-line forms, mobile-specific forms, and more.
 
 Using OptinMonster forms combined with our exit-intent technology, page-level targeting, and behavior automation, users have seen an instant boost in conversion rate, _even upwards of 785%!_
 
@@ -29,28 +29,28 @@ You can choose from 8 different type of optins including: popups, floating bars,
 
 All of our templates are 100% responsive and mobile friendly.
 
-= Easy Integration with All Email Marketing Services = 
+= Easy Integration with All Email Marketing Services =
 
 We started with the goal to make the most beginner friendly lead-generation plugin. That's why OptinMonster works out of the box with all popular email marketing service providers including but not limited to:
 
-MailChimp, AWeber, Infusionsoft, GetResponse, ConstantContact, CampaignMonitor, Hubspot, Marketo, ActiveCampaign, Pardot, TotalSend, Emma, iContact, MailerLite, Customer.io, MailPoet, and FeedBlitz. 
+MailChimp, AWeber, Infusionsoft, GetResponse, ConstantContact, CampaignMonitor, Hubspot, Marketo, ActiveCampaign, Pardot, TotalSend, Emma, iContact, MailerLite, Customer.io, MailPoet, and FeedBlitz.
 
 You can also use custom HTML forms as well as use shortcodes to add other form plugins such as Gravity Forms, Ninja Forms, etc.
 
-= Powerful Exit-Intent&reg; Technology = 
+= Powerful Exit-Intent&reg; Technology =
 
 OptinMonster is among the pioneers of <a href="http://optinmonster.com/features/exit-intent/" rel="friend" title="Exit-Intent Technology">exit-intent technology</a>. It helps you track user's mouse behavior and prompt them with a targeted message at the precise moment they are about to leave.
 
 This allows you to re-engage the visitor and encourage them to subscribe. Exit-intent is proven to increase conversions.
 
-We used it on our site, <a href="http://www.wpbeginner.com/" rel="friend" title="WPBeginner - Beginners Guide to WordPress">WPBeginner</a>, and increased conversions by over 600%.   
+We used it on our site, <a href="http://www.wpbeginner.com/" rel="friend" title="WPBeginner - Beginners Guide to WordPress">WPBeginner</a>, and increased conversions by over 600%.
 
 But don't just take our word. See what one of the experts are saying:
 
 > In only 7 months, <strong>we added more than 95,000 names to our email list</strong> using OptinMonster's Exit Intent™ technology. We strongly recommend it!<br>
 > Michael Stelzner - Founder of Social Media Examiner
 
-= Advanced Page Level Targeting and Behavior Personalization = 
+= Advanced Page Level Targeting and Behavior Personalization =
 
 Have you ever wondered what if you created a highly targeted message based on the specific page, traffic referral source, category or tag of your site? How would that impact your conversions?
 
@@ -65,7 +65,7 @@ Read how this helped one of our users:
 > OptinMonster played a critical role in increasing my email optin conversion rate by 469%. In real numbers, <strong>that is the difference between $7,765 and $47,748 per month</strong> in revenue.<br>
 > Matthew Woodward - Professional Blogger and SEO Expert
 
-= Easy to Use A/B Split Testing = 
+= Easy to Use A/B Split Testing =
 
 A/B testing is one of the most desired features, but normally it is extremely hard to setup for beginners. Well, we changed that.
 
@@ -76,11 +76,11 @@ You can try different content, headlines, layouts, styles, and opt-in triggers, 
 > Using OptinMonster <strong>we got a 300% improvement on our email conversion rates</strong> which translated into significant revenue. We have tried many similar lead generation plugins and nothing can compete with OptinMonster.<br>
 > Ian Cleary - Founder of RazorSocial
 
-= Detailed Conversion Analytics = 
+= Detailed Conversion Analytics =
 
-Most people don't know what to do with analytics because they don't understand them. OptinMonster's <a href="http://optinmonster.com/features/conversion-analytics/" rel="friend" title=“conversion analytics">conversion analytics</a> is easy to understand and give you the stats that matter, so you can take action to improve your lead-generation strategy.
+Most people don't know what to do with analytics because they don't understand them. OptinMonster's <a href="http://optinmonster.com/features/conversion-analytics/" rel="friend" title="conversion analytics">conversion analytics</a> is easy to understand and give you the stats that matter, so you can take action to improve your lead-generation strategy.
 
-= MonsterLinks&trade; - 2 Step Opt-in Technology = 
+= MonsterLinks&trade; - 2 Step Opt-in Technology =
 
 <a href="http://optinmonster.com/features/monsterlinks/" rel="friend" title="MonsterLinks">MonsterLinks</a> allow you to turn any link or image into a 2-step opt-in process which is proven to boost conversions by as much as 785%. Marketers use it to offer content upgrades and then use OptinMonster's success redirect feature for lead-magnet delivery.
 
