@@ -1,0 +1,239 @@
+/* ==========================================================================
+   Settings Styles
+   ========================================================================== */
+
+.omapi-page div.updated,
+.omapi-page div.error {
+	margin-top: 15px;
+}
+
+.omapi-hidden {
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+	height: 0;
+	line-height: 0;
+}
+
+.omapi-clear {
+	clear: both;
+}
+
+.omapi-clear:after {
+	clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    line-height: 0;
+    overflow: auto;
+    visibility: hidden;
+    zoom: 1;
+}
+
+.omapi-red {
+	color: red !important;
+}
+
+.omapi-green {
+	color: green !important;
+}
+
+.omapi-ui {
+	min-height: 390px;
+	margin-top: 20px;
+}
+
+.omapi-ui,
+.omapi-ui * {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.omapi-tabs {
+	float: left;
+	width: 25%;
+	min-width: 175px;
+	margin: 0;
+	border-right: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+}
+
+.omapi-panels {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.omapi-panels li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.omapi-panels li a {
+	display: block;
+	padding: 15px 10px;
+	border-bottom: 1px solid #ddd;
+	text-decoration: none;
+	font-size: 16px;
+	outline: none;
+	background: #fff;
+}
+
+.omapi-panels li a:focus {
+	outline: none !important;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.omapi-panels li.omapi-panel-first a {
+	border-top: 1px solid #ddd;
+}
+
+.omapi-panels li.omapi-panel-active a,
+.omapi-panels li a:hover {
+	background: #f1f1f1;
+}
+
+.omapi-panels li.omapi-panel-active a {
+	color: #222;
+}
+
+.omapi-tabs-content {
+	float: left;
+	width: 75%;
+	border-top: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background: #fff;
+	padding: 15px 30px;
+}
+
+.omapi-content {
+	display: none;
+}
+
+.omapi-content.omapi-content-active {
+	display: block;
+}
+
+.omapi-content h3 {
+	padding: 0;
+	margin: 0;
+}
+
+.omapi-field-box {
+	margin: 1.5em 0;
+}
+
+.omapi-field-wrap {
+	margin: 0;
+}
+
+.omapi-field-box li {
+	list-style: none;
+	margin: 0;
+}
+
+.omapi-field-box ul.children {
+	margin: 1px 0 1px 20px;
+}
+
+.omapi-field-box .wp-hidden-children {
+	display: none;
+}
+
+.omapi-field-box > div {
+	max-width: 350px;
+}
+
+.omapi-field-box p.hide-if-no-js,
+.omapi-field-box li.hide-if-no-js {
+	display: none;
+}
+
+.omapi-field-wrap label {
+	font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.omapi-field-wrap input[type=email],
+.omapi-field-wrap input[type=number],
+.omapi-field-wrap input[type=password],
+.omapi-field-wrap input[type=search],
+.omapi-field-wrap input[type=text],
+.omapi-field-wrap select {
+    min-width: 350px;
+    padding: 6px 8px;
+}
+
+.omapi-field-box .select2-container {
+	min-width: 350px;
+}
+
+.omapi-field-wrap textarea {
+	width: 100%;
+	padding: 6px 8px;
+}
+
+.omapi-field-desc {
+	font-size: 12px;
+    font-style: italic;
+    color: #666;
+    vertical-align: middle;
+}
+
+.omapi-back {
+	float: right;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+.omapi-optin {
+	padding: 20px 10px;
+	border-bottom: 1px solid #eee;
+	font-size: 15px;
+	margin: 0;
+}
+
+.omapi-optin-first {
+	border-top: 1px solid #eee;
+	margin-top: 1em;
+}
+
+.omapi-optin.omapi-test-mode {
+	background: #fcf8e3 !important;
+}
+
+.omapi-optin a {
+	text-decoration: none;
+	border-bottom: 0 none;
+}
+
+.omapi-optin .omapi-test {
+	color: #8a6d3b;
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+
+.omapi-optin .omapi-status {
+	float: right;
+}
+
+.omapi-optin .omapi-links {
+	visibility: hidden;
+}
+
+.omapi-optin:hover > .omapi-links {
+	visibility: visible;
+}
+
+.omapi-optin .omapi-links,
+.omapi-optin .omapi-links a {
+	font-size: 12px;
+}
