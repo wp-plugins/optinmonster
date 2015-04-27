@@ -147,5 +147,8 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
-= 1.0.0 =
-* Initial release
+= 0.9.9 =
+* Fix error with loading old API script.
+
+= 0.9.8 =
+* Initial release.

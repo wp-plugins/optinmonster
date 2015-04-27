@@ -120,7 +120,7 @@ class OMAPI_Output {
     public function filter_api_url( $url ) {
 
         // If the handle is not ours, do nothing.
-        if ( false === strpos( $url, 'optin-monster-wp-api/assets/js/api.js' ) ) {
+        if ( false === strpos( $url, 'optinmonster/assets/js/api.js' ) ) {
 	        return $url;
 	    }
 
