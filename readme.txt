@@ -147,6 +147,11 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
+= 1.0.0 =
+* Fixed bug with exclusive/never settings not showing previously selected pages.
+* Fixed bug with API script and loading social services for specific popup types.
+* Removed unused updater class reference and code.
+
 = 0.9.9 =
 * Fix error with loading old API script.
 
