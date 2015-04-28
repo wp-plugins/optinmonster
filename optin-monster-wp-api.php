@@ -5,7 +5,7 @@
  * Description: OptinMonster API plugin to connect your WordPress site to your OptinMonster forms.
  * Author:		Thomas Griffin
  * Author URI:	https://thomasgriffin.io
- * Version:		0.9.8
+ * Version:		1.0.0
  * Text Domain: optin-monster-api
  * Domain Path: languages
  *
@@ -60,7 +60,7 @@ class OMAPI {
 	 *
 	 * @var string
 	 */
-	public $version = '0.9.8';
+	public $version = '1.0.0';
 
 	/**
 	 * The name of the plugin.
@@ -78,7 +78,7 @@ class OMAPI {
 	 *
 	 * @var string
 	 */
-	public $plugin_slug = 'optin-monster-wp-api';
+	public $plugin_slug = 'optinmonster';
 
 	/**
 	 * Plugin file.
@@ -150,7 +150,6 @@ class OMAPI {
 		// Load admin only components.
 		if ( is_admin() ) {
 			$this->load_admin();
-			$this->load_updater();
 		}
 
 		// Run hook once OptinMonster has been fully loaded.
@@ -208,38 +207,6 @@ class OMAPI {
 
 		// Fire a hook to say that the admin classes are loaded.
 		do_action( 'optin_monster_api_admin_loaded' );
-
-	}
-
-	/**
-	 * Loads the updater class into scope.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return null Return early if the license key is not set or there are key errors.
-	 */
-	public function load_updater() {
-
-		// Retrieve the API creds. If they are not set, return early.
-		$creds = $this->get_api_credentials();
-		if ( ! $creds ) {
-			return;
-		}
-
-		// Go ahead and initialize the updater.
-		$args = array(
-			'plugin_name' => $this->plugin_name,
-			'plugin_slug' => $this->plugin_slug,
-			'plugin_path' => plugin_basename( __FILE__ ),
-			'plugin_url'  => trailingslashit( WP_PLUGIN_URL ) . $this->plugin_slug,
-			'version'	  => $this->version,
-			'key'		  => $creds['key'],
-			'user'		  => $creds['user']
-		);
-		$this->updater = new OMAPI_Updater( $args );
-
-		// Fire a hook to say that the updater class is loaded.
-		do_action( 'optin_monster_api_updater_loaded', $creds );
 
 	}
 

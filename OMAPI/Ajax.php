@@ -190,7 +190,7 @@ class OMAPI_Ajax {
      *
      * @since 1.0.0
      */
-    public function query_selected() {
+    public function query_selected_posts() {
 
         // Run a security check first.
         check_ajax_referer( 'omapi-query-nonce', 'nonce' );
