@@ -625,7 +625,7 @@ class OMAPI_Output {
 
 	    // Output JS variable.
 	    ?>
-	    <script type="text/javascript">var omapi_localized = { ajax: '<?php echo add_query_arg( 'optin-monster-ajax-route', true, home_url( 'index.php' ) ); ?>', nonce: '<?php echo wp_create_nonce( 'omapi' ); ?>' };</script>
+	    <script type="text/javascript">var omapi_localized = { ajax: '<?php echo esc_url_raw( add_query_arg( 'optin-monster-ajax-route', true, home_url( 'index.php' ) ) ); ?>', nonce: '<?php echo wp_create_nonce( 'omapi' ); ?>' };</script>
 	    <?php
 
 	}

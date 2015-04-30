@@ -94,10 +94,13 @@ class OMAPI_Content {
 		    <?php wp_nonce_field( 'omapi_nonce_' . $id, 'omapi_nonce_' . $id ); ?>
 		    <input type="hidden" name="omapi_panel" value="<?php echo $id; ?>" />
 		    <input type="hidden" name="omapi_save" value="true" />
+		    <?php if ( 'settings' == $this->view ) : ?>
+		    <input type="hidden" name="omapi[<?php echo esc_attr( $this->view ); ?>][wpform]" value="true" />
+		    <?php endif; ?>
 		    <h3>
 			    <?php if ( isset( $_GET['optin_monster_api_action'] ) && 'edit' == $_GET['optin_monster_api_action'] ) : ?>
 				<?php printf( __( 'Output Settings for %s', 'optin-monster-api' ), esc_html( $this->optin->post_title ) ); ?>
-			    <span class="omapi-back"><a class="button button-secondary button-small" href="<?php echo add_query_arg( array( 'optin_monster_api_view' => 'optins' ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ); ?>" title="<?php esc_attr_e( 'Back to optin overview', 'optin-monster-api' ); ?>"><?php _e( 'Back to Overview', 'optin-monster-api' ); ?></a></span>
+			    <span class="omapi-back"><a class="button button-secondary button-small" href="<?php echo esc_url_raw( add_query_arg( array( 'optin_monster_api_view' => 'optins' ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ) ); ?>" title="<?php esc_attr_e( 'Back to optin overview', 'optin-monster-api' ); ?>"><?php _e( 'Back to Overview', 'optin-monster-api' ); ?></a></span>
 			    <?php else : ?>
 			    <?php echo esc_html( $panel ); ?>
 			    <?php endif; ?>
@@ -136,7 +139,7 @@ class OMAPI_Content {
 		    ?>
 		    	<p class="submit">
 			    	<input class="button button-primary" type="submit" name="omapi_refresh" value="<?php esc_attr_e( 'Refresh Optins', 'optin-monster-api' ); ?>" tabindex="749" />
-			    	<a class="button button-secondary" href="<?php echo wp_nonce_url( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'cookies' ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ), 'omapi-action' ); ?>" title="<?php esc_attr_e( 'Clear Local Cookies', 'optin-monster-api' ); ?>"><?php _e( 'Clear Local Cookies', 'optin-monster-api' ); ?></a>
+			    	<a class="button button-secondary" href="<?php echo wp_nonce_url( esc_url_raw( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'cookies' ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ) ), 'omapi-action' ); ?>" title="<?php esc_attr_e( 'Clear Local Cookies', 'optin-monster-api' ); ?>"><?php _e( 'Clear Local Cookies', 'optin-monster-api' ); ?></a>
 		    	</p>
 		    </form>
 		    <?php
@@ -215,7 +218,7 @@ class OMAPI_Content {
 	        $test_class = $test ? ' omapi-test-mode' : '';
 	    ?>
         <p class="omapi-optin<?php echo $class . $test_class; ?>">
-	        <a href="<?php echo add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'edit', 'optin_monster_api_id' => $optin->ID ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ); ?>" title="<?php printf( esc_attr__( 'Manage output settings for %s', 'optin-monster-api' ), $optin->post_title ); ?>"><?php echo $optin->post_title; ?></a>
+	        <a href="<?php echo esc_url_raw( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'edit', 'optin_monster_api_id' => $optin->ID ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ) ); ?>" title="<?php printf( esc_attr__( 'Manage output settings for %s', 'optin-monster-api' ), $optin->post_title ); ?>"><?php echo $optin->post_title; ?></a>
 	        <?php if ( $test ) : ?>
 	        <span class="omapi-test"><?php _e( 'Test Mode', 'optin-monster-api' ); ?></span>
 	        <?php endif; ?>
@@ -302,10 +305,10 @@ class OMAPI_Content {
 		$status_link = $status ? __( 'Disable', 'optin-monster-api' ) : __( 'Go Live', 'optin-monster-api' );
 		$status_desc = $status ? esc_attr__( 'Disable this optin', 'optin-monster-api' ) : esc_attr__( 'Go live with this optin', 'optin-monster-api' );
 		$links  	 = array();
-		$links['edit']   = '<a href="' . add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'edit', 'optin_monster_api_id' => $optin_id ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ) . '" title="' . esc_attr__( 'Edit this optin', 'optin-monster-api' ) . '">Edit</a>';
-		$links['status'] = '<a href="' . wp_nonce_url( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'status', 'optin_monster_api_id' => $optin_id ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ), 'omapi-action' ) . '" title="' . $status_desc . '">' . $status_link . '</a>';
-		$links['test'] = '<a href="' . wp_nonce_url( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'test', 'optin_monster_api_id' => $optin_id ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ), 'omapi-action' ) . '" title="' . $test_desc . '">' . $test_link . '</a>';
-        $links['delete'] = '<a class="omapi-red" href="' . wp_nonce_url( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'delete', 'optin_monster_api_id' => $optin_id ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ), 'omapi-action' ) . '" title="' . esc_attr__( 'Delete this optin locally', 'optin-monster-api' ) . '">Delete</a>';
+		$links['edit']   = '<a href="' . esc_url_raw( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'edit', 'optin_monster_api_id' => $optin_id ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ) ) . '" title="' . esc_attr__( 'Edit this optin', 'optin-monster-api' ) . '">Edit</a>';
+		$links['status'] = '<a href="' . wp_nonce_url( esc_url_raw( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'status', 'optin_monster_api_id' => $optin_id ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ) ), 'omapi-action' ) . '" title="' . $status_desc . '">' . $status_link . '</a>';
+		$links['test'] = '<a href="' . wp_nonce_url( esc_url_raw( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'test', 'optin_monster_api_id' => $optin_id ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ) ), 'omapi-action' ) . '" title="' . $test_desc . '">' . $test_link . '</a>';
+        $links['delete'] = '<a class="omapi-red" href="' . wp_nonce_url( esc_url_raw( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'delete', 'optin_monster_api_id' => $optin_id ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ) ), 'omapi-action' ) . '" title="' . esc_attr__( 'Delete this optin locally', 'optin-monster-api' ) . '">Delete</a>';
 
         $links = apply_filters( 'optin_monster_api_action_links', $links, $optin_id );
         return implode( ' | ', (array) $links );
@@ -318,7 +321,7 @@ class OMAPI_Content {
 		?>
 		<p><?php _e( 'You can migrate all of your existing OptinMonster data (optin forms, settings & integrations) to the new hosted platform. Just click the "Migrate" button below.', 'optin-monster-api' ); ?></p>
 		<p class="submit">
-			<a class="button button-primary" href="<?php echo wp_nonce_url( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'migrate' ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ), 'omapi-action' ); ?>"><?php _e( 'Migrate', 'optin-monster-api' ); ?></a>
+			<a class="button button-primary" href="<?php echo wp_nonce_url( esc_url_raw( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'migrate' ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ) ), 'omapi-action' ); ?>"><?php _e( 'Migrate', 'optin-monster-api' ); ?></a>
 		</p>
 
 		<?php
@@ -354,7 +357,7 @@ class OMAPI_Content {
 			<hr />
 			<p><?php _e( 'If your optin forms, site information or integrations did not migrate properly you can reset the migration and try again. Please note that this can cause some data duplication in your account.', 'optin-monster-api' ); ?></p>
 			<p class="submit">
-				<a class="button button-secondary" href="<?php echo wp_nonce_url( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'migrate-reset' ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ), 'omapi-action' ); ?>"><?php _e( 'Reset Migration', 'optin-monster-api' ); ?></a>
+				<a class="button button-secondary" href="<?php echo wp_nonce_url( esc_url_raw( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'migrate-reset' ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ) ), 'omapi-action' ); ?>"><?php _e( 'Reset Migration', 'optin-monster-api' ); ?></a>
 			</p>
 
 		<?php endif;

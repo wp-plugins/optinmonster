@@ -38,6 +38,11 @@
 	color: green !important;
 }
 
+.omapi-page h2 span {
+	font-size: 13px;
+	color: #666;
+}
+
 .omapi-ui {
 	min-height: 390px;
 	margin-top: 20px;

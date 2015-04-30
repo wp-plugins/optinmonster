@@ -26,7 +26,7 @@ class OMAPI_Actions {
      * @var string
      */
     public $file = __FILE__;
-    
+
     /**
      * Holds any action notices.
      *
@@ -54,7 +54,7 @@ class OMAPI_Actions {
 
 	    // Set our object.
 	    $this->set();
-		
+
 		// Add validation messages.
 		add_action( 'admin_init', array( $this, 'actions' ) );
 		add_action( 'admin_notices', array( $this, 'notices' ) );
@@ -87,21 +87,21 @@ class OMAPI_Actions {
 		if ( ! $action || 'edit' == $action ) {
 			return;
 		}
-		
+
 		// Verify the nonce URL.
 		if ( ! isset( $_GET['_wpnonce'] ) || ! wp_verify_nonce( $_GET['_wpnonce'], 'omapi-action' ) ) {
 			return;
 		}
-		
+
 		switch ( $action ) {
 			case 'status' :
 				if ( $this->status() ) {
-					$this->notices['updated'] = __( 'The optin status was updated successfully.', 'optin-monster-api' );
+					$this->notices['updated'] = sprintf( __( 'The optin status was updated successfully. You can configure more specific loading requirements by <a href="%s" title="Click here to edit the output settings for the updated optin.">editing the output settings</a> for the optin.', 'optin-monster-api' ), esc_url_raw( add_query_arg( array( 'page' => 'optin-monster-api-settings', 'optin_monster_api_view' => 'optins', 'optin_monster_api_action' => 'edit', 'optin_monster_api_id' => $this->optin_id ), admin_url( 'admin.php' ) ) ) );
 				} else {
 					$this->notices['error'] = __( 'There was an error updating the optin status. Please try again.', 'optin-monster-api' );
 				}
 			break;
-			
+
 			case 'test' :
 				if ( $this->test() ) {
 					$this->notices['updated'] = __( 'You have updated test mode for the optin successfully.', 'optin-monster-api' );
@@ -109,7 +109,7 @@ class OMAPI_Actions {
 					$this->notices['error'] = __( 'There was an error updating test mode for the optin. Please try again.', 'optin-monster-api' );
 				}
 			break;
-			
+
 			case 'delete' :
 				if ( $this->delete() ) {
 					$this->notices['updated'] = __( 'The local optin was deleted successfully.', 'optin-monster-api' );
@@ -117,7 +117,7 @@ class OMAPI_Actions {
 					$this->notices['error'] = __( 'There was an error deleting the local optin. Please try again.', 'optin-monster-api' );
 				}
 			break;
-			
+
 			case 'cookies' :
 				if ( $this->cookies() ) {
 					$this->notices['updated'] = __( 'The local cookies have been cleared successfully.', 'optin-monster-api' );
@@ -144,7 +144,7 @@ class OMAPI_Actions {
 		}
 
     }
-    
+
     /**
      * Changes the status of an optin.
      *
@@ -152,12 +152,27 @@ class OMAPI_Actions {
      */
     public function status() {
 
+		// Prepare variables.
 	    $status = (bool) get_post_meta( $this->optin_id, '_omapi_enabled', true );
 	    $new	= $status ? false : true;
+	    $field  = 'global';
+	    $type   = get_post_meta( $this->optin_id, '_omapi_type', true );
+	    if ( 'post' == $type ) {
+		    $field = 'automatic';
+	    } else if ( 'sidebar' == $type ) {
+		    $field = false;
+	    }
+
+	    // Maybe update the global/automatic status.
+	    if ( $field ) {
+		    update_post_meta( $this->optin_id, '_omapi_' . $field, $new );
+	    }
+
+	    // Set enabled status.
 	    return update_post_meta( $this->optin_id, '_omapi_enabled', $new );
 
     }
-    
+
     /**
      * Changes test mode for the optin.
      *
@@ -170,7 +185,7 @@ class OMAPI_Actions {
 	    return update_post_meta( $this->optin_id, '_omapi_test', $new );
 
     }
-    
+
     /**
      * Removes a local optin.
      *
@@ -181,7 +196,7 @@ class OMAPI_Actions {
 	    return wp_delete_post( $this->optin_id, true );
 
     }
-    
+
     /**
      * Clears the local cookies.
      *
@@ -198,7 +213,7 @@ class OMAPI_Actions {
 			    }
 			}
 	    }
-	    
+
 	    return true;
 
     }

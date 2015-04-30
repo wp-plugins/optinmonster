@@ -204,7 +204,7 @@ class OMAPI_Menu {
 
         ?>
         <div class="wrap omapi-page">
-	        <h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
+	        <h2><?php echo esc_html( get_admin_page_title() ); ?> <span><?php printf( __( 'v%s', 'optin-monster-api' ), $this->base->version ); ?></h2>
 	        <div class="omapi-ui">
 		        <div class="omapi-tabs">
 			        <ul class="omapi-panels">
@@ -213,7 +213,7 @@ class OMAPI_Menu {
 					        $first  = 0 == $i ? ' omapi-panel-first' : '';
 					        $active = $id == $this->view ? ' omapi-panel-active' : '';
 					    ?>
-				        <li class="omapi-panel omapi-panel-<?php echo sanitize_html_class( $id ); ?><?php echo $first . $active; ?>"><a href="<?php echo esc_url( add_query_arg( 'optin_monster_api_view', $id, admin_url( 'admin.php?page=optin-monster-api-settings' ) ) ); ?>" class="omapi-panel-link" data-panel="<?php echo $id; ?>" data-panel-title="<?php echo $panel; ?>"><?php echo $panel; ?></a></li>
+				        <li class="omapi-panel omapi-panel-<?php echo sanitize_html_class( $id ); ?><?php echo $first . $active; ?>"><a href="<?php echo esc_url_raw( add_query_arg( 'optin_monster_api_view', $id, admin_url( 'admin.php?page=optin-monster-api-settings' ) ) ); ?>" class="omapi-panel-link" data-panel="<?php echo $id; ?>" data-panel-title="<?php echo $panel; ?>"><?php echo $panel; ?></a></li>
 				        <?php $i++; endforeach; ?>
 			        </ul>
 		        </div>

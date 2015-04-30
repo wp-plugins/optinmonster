@@ -147,11 +147,9 @@ class OMAPI_Api {
         );
 
         // Perform the query and retrieve the response.
-        //$time_start = microtime( true );
         $response      = 'GET' == $this->method ? wp_remote_get( esc_url_raw( $this->url ) . '?' . $body, $data ) : wp_remote_post( esc_url_raw( $this->url ), $data );
         $response_code = wp_remote_retrieve_response_code( $response );
         $response_body = json_decode( wp_remote_retrieve_body( $response ) );
-		//echo '<pre>' . var_export( number_format( microtime( true ) - $time_start, 10 ), true ) . '</pre>';
         //echo '<pre>' . var_export( $response, true ) . '</pre>'; die;
 
         // Bail out early if there are any errors.

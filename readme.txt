@@ -147,6 +147,12 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
+= 1.0.0.1 =
+* The "Go Live" link now enables an optin and sets the global/automatic loading setting as well.
+* Fixed bug with not being able to uncheck clearing local cookies on optin save.
+* Added extra XSS security checks with `esc_url_raw`.
+* Added version number beside plugin header title for easy version checking.
+
 = 1.0.0 =
 * Fixed bug with exclusive/never settings not showing previously selected pages.
 * Fixed bug with API script and loading social services for specific popup types.
