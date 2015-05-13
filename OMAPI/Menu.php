@@ -204,7 +204,7 @@ class OMAPI_Menu {
 
         ?>
         <div class="wrap omapi-page">
-	        <h2><?php echo esc_html( get_admin_page_title() ); ?> <span><?php printf( __( 'v%s', 'optin-monster-api' ), $this->base->version ); ?></h2>
+	        <h2><?php echo esc_html( get_admin_page_title() ); ?> <span><?php printf( __( 'v%s', 'optin-monster-api' ), $this->base->version ); ?></span> <a href="https://app.optinmonster.com/account/create" class="button button-primary button-large omapi-new-optin" title="<?php esc_attr_e( 'Create New Optin', 'optin-monster-api' ); ?>" target="_blank"><?php _e( 'Create New Optin', 'optin-monster-api' ); ?></a></h2>
 	        <div class="omapi-ui">
 		        <div class="omapi-tabs">
 			        <ul class="omapi-panels">

@@ -43,6 +43,10 @@
 	color: #666;
 }
 
+.omapi-page h2 .omapi-new-optin {
+	float: right;
+}
+
 .omapi-ui {
 	min-height: 390px;
 	margin-top: 20px;

@@ -299,13 +299,15 @@ class OMAPI_Content {
     public function get_optin_links( $optin_id ) {
 
 		$test   	 = get_post_meta( $optin_id, '_omapi_test', true );
+		$ids		 = get_post_meta( $optin_id, '_omapi_ids', true );
+		$edit_id	 = absint( $ids[0] );
 		$test_link   = $test ? __( 'Disable Test Mode', 'optin-monster-api' ) : __( 'Enable Test Mode', 'optin-monster-api' );
 		$test_desc   = $test ? esc_attr__( 'Disable test mode for this optin', 'optin-monster-api' ) : esc_attr__( 'Enable test mode for this optin', 'optin-monster-api' );
 		$status 	 = (bool) get_post_meta( $optin_id, '_omapi_enabled', true );
 		$status_link = $status ? __( 'Disable', 'optin-monster-api' ) : __( 'Go Live', 'optin-monster-api' );
 		$status_desc = $status ? esc_attr__( 'Disable this optin', 'optin-monster-api' ) : esc_attr__( 'Go live with this optin', 'optin-monster-api' );
 		$links  	 = array();
-		$links['edit']   = '<a href="' . esc_url_raw( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'edit', 'optin_monster_api_id' => $optin_id ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ) ) . '" title="' . esc_attr__( 'Edit this optin', 'optin-monster-api' ) . '">Edit</a>';
+		$links['edit']   = '<a href="' . esc_url_raw( add_query_arg( array( 'om_optin_id' => $edit_id ), 'https://app.optinmonster.com/account/edit/' ) ) . '" title="' . esc_attr__( 'Edit this optin on the OptinMonster App', 'optin-monster-api' ) . '" target="_blank">Edit</a>';
 		$links['status'] = '<a href="' . wp_nonce_url( esc_url_raw( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'status', 'optin_monster_api_id' => $optin_id ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ) ), 'omapi-action' ) . '" title="' . $status_desc . '">' . $status_link . '</a>';
 		$links['test'] = '<a href="' . wp_nonce_url( esc_url_raw( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'test', 'optin_monster_api_id' => $optin_id ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ) ), 'omapi-action' ) . '" title="' . $test_desc . '">' . $test_link . '</a>';
         $links['delete'] = '<a class="omapi-red" href="' . wp_nonce_url( esc_url_raw( add_query_arg( array( 'optin_monster_api_view' => $this->view, 'optin_monster_api_action' => 'delete', 'optin_monster_api_id' => $optin_id ), admin_url( 'admin.php?page=optin-monster-api-settings' ) ) ), 'omapi-action' ) . '" title="' . esc_attr__( 'Delete this optin locally', 'optin-monster-api' ) . '">Delete</a>';

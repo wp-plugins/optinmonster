@@ -105,7 +105,33 @@ class OMAPI_Output {
     public function api_script() {
 
         wp_enqueue_script( $this->base->plugin_slug . '-api-script', OPTINMONSTER_API, array( 'jquery' ), $this->base->version );
-        add_filter( 'clean_url', array( $this, 'filter_api_url' ), 10, 2 );
+
+        if ( version_compare( get_bloginfo( 'version' ), '4.1.0', '>=' ) ) {
+	        add_filter( 'script_loader_tag', array( $this, 'filter_api_script' ), 10, 2 );
+        } else {
+	        add_filter( 'clean_url', array( $this, 'filter_api_url' ) );
+	    }
+
+    }
+
+    /**
+     * Filters the API script tag to add a custom ID.
+     *
+     * @since 1.0.0
+     *
+     * @param string $tag 	 The HTML script output.
+     * @param string $handle The script handle to target.
+     * @return string $tag   Amended HTML script with our ID attribute appended.
+     */
+    public function filter_api_script( $tag, $handle ) {
+
+        // If the handle is not ours, do nothing.
+        if ( $this->base->plugin_slug . '-api-script' !== $handle ) {
+	        return $tag;
+	    }
+
+	    // Adjust the output to add our custom script ID.
+	    return str_replace( ' src', ' id="omapi-script" src', $tag );
 
     }
 
@@ -124,7 +150,7 @@ class OMAPI_Output {
 	        return $url;
 	    }
 
-	    // Adjust the URL to add our custom script.
+	    // Adjust the URL to add our custom script ID.
 	    return "$url' id='omapi-script";
 
     }
