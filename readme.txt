@@ -147,6 +147,9 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
+= 1.0.0.6 =
+* Added a dedicated edit output settings link for each optin.
+
 = 1.0.0.5 =
 * Fixed bug with passing lead data to redirect URLs.
 * Added improved UX by being able to create and edit optins from the plugin itself.
