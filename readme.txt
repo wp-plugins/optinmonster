@@ -147,6 +147,12 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
+= 1.0.0.8 =
+* Clear out global cookie when clearing local cookies.
+* Fixed bug with not loading in IE7-9.
+* Fixed bug with placeholder shims not working in IE7-9.
+* Fixed bug with GA clashes when using multiple tracking scripts on a page.
+
 = 1.0.0.7 =
 * Fixed bug with possible duplicate submissions in some configurations.
 * Added enhanced conversion tracking with GA.

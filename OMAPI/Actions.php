@@ -214,6 +214,9 @@ class OMAPI_Actions {
 			}
 	    }
 
+	    // Also clear out global cookie.
+	    setcookie( 'om-global-cookie', '', -1, COOKIEPATH, COOKIE_DOMAIN, false );
+
 	    return true;
 
     }
