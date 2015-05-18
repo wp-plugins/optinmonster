@@ -147,6 +147,10 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
+= 1.0.0.7 =
+* Fixed bug with possible duplicate submissions in some configurations.
+* Added enhanced conversion tracking with GA.
+
 = 1.0.0.6 =
 * Added a dedicated edit output settings link for each optin.
 
