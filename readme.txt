@@ -147,6 +147,11 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
+= 1.0.0.9 =
+* Fixed analytics bug that caused bounce rates to go whacky in GA.
+* Fixed "powered by" link placement when using display effects.
+* Added focus effect for input fields when an optin is loaded.
+
 = 1.0.0.8 =
 * Clear out global cookie when clearing local cookies.
 * Fixed bug with not loading in IE7-9.
