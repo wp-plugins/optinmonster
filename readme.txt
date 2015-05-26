@@ -147,6 +147,9 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
+= 1.1.0.1 =
+* Fixed fixed bug with bounce rate in GA.
+
 = 1.1.0 =
 * Fixed focus bug.
 
