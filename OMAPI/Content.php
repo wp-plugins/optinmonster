@@ -223,6 +223,7 @@ class OMAPI_Content {
 	        <span class="omapi-test"><?php _e( 'Test Mode', 'optin-monster-api' ); ?></span>
 	        <?php endif; ?>
 	        <span class="omapi-status"><?php echo $status; ?></span><br>
+	        <span class="omapi-slug"><?php echo $optin->post_name; ?></span>
 	        <span class="omapi-links"><?php echo $this->get_optin_links( $optin->ID ); ?></span>
         </p>
         <?php $i++; endforeach; ?>

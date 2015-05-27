@@ -230,8 +230,14 @@
 	font-weight: 700;
 }
 
-.omapi-optin .omapi-status {
+.omapi-optin .omapi-status,
+.omapi-optin .omapi-slug {
 	float: right;
+}
+
+.omapi-optin .omapi-slug {
+	font-size: 13px;
+	color: #999;
 }
 
 .omapi-optin .omapi-links {
