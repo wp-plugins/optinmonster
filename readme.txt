@@ -147,6 +147,9 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
+= 1.1.0.3 =
+* Fixed bug that caused site verification to fail
+
 = 1.1.0.2 =
 * Added support for assigning multiple domains to a single optin.
 * Added unique optin slug on Overview screen to make life easier.
