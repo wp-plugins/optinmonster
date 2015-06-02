@@ -147,8 +147,13 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
+= 1.1.0.4 =
+* Fixed bug that caused paused split tests to continue to run.
+* Fixed bug with passing optin data to a redirect URL with query args.
+* Added ability to submit lightbox optin forms with the enter button.
+
 = 1.1.0.3 =
-* Fixed bug that caused site verification to fail
+* Fixed bug that caused site verification to fail.
 
 = 1.1.0.2 =
 * Added support for assigning multiple domains to a single optin.
