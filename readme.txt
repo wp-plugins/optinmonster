@@ -147,6 +147,9 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
+= 1.1.0.5 =
+* Added ability to pause parent campaigns from the app.
+
 = 1.1.0.4 =
 * Fixed bug that caused paused split tests to continue to run.
 * Fixed bug with passing optin data to a redirect URL with query args.
