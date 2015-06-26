@@ -273,8 +273,8 @@ class OMAPI_Content {
 				echo $object->get_setting_ui( 'optins', 'categories' );
 				echo $object->get_setting_ui( 'optins', 'taxonomies' );
 				echo $object->get_setting_ui( 'optins', 'show' );
-				echo $object->get_setting_ui( 'optins', 'shortcode' );
 			}
+	        echo $object->get_setting_ui( 'optins', 'shortcode' );
 
 			// Add support for MailPoet if the plugin is active.
 			if ( class_exists( 'WYSIJA' ) ) {
