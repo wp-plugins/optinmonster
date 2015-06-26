@@ -147,6 +147,13 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
+= 1.1.1 =
+* Added option to move floating bar to top of the page. No custom CSS needed!
+* Added option for a privacy statement below optin form.
+* Added option to exclude by page slug
+* Shortcode parsing now available for all optin types.
+* Various bug fixes
+
 = 1.1.0.5 =
 * Added ability to pause parent campaigns from the app.
 
