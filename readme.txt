@@ -147,6 +147,10 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
+= 1.1.2 =
+* Fixed display error when multiple taxonomy terms were selected for an optin.
+* Added selection of scheduled posts in optin output settings.
+
 = 1.1.1 =
 * Added option to move floating bar to top of the page. No custom CSS needed!
 * Added option for a privacy statement below optin form.

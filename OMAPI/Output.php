@@ -386,11 +386,14 @@ class OMAPI_Output {
 		        $taxonomies['post_format'] = 'post_format';
 		        $taxonomies 			   = wp_get_object_terms( $post_id, $taxonomies, array( 'fields' => 'ids' ) );
 		        foreach ( $fields['taxonomies'] as $taxonomy => $taxonomy_id ) {
-		            if ( $post_id && $taxonomy_id && has_term( $taxonomy_id, $taxonomy, $post_id ) ){
-		                $content .= $html;
-		                $this->set_slug( $optin );
-                        continue 2;
-		            }
+			        $tax_ids = explode(',', $taxonomy_id[0] );
+			        foreach ( $tax_ids as $tax_id ) {
+				        if ( $post_id && $tax_id && has_term( $tax_id, $taxonomy, $post_id ) ) {
+					        $content .= $html;
+					        $this->set_slug( $optin );
+					        continue 2;
+				        }
+			        }
 		        }
 		    }
 
@@ -560,11 +563,14 @@ class OMAPI_Output {
 		        $taxonomies['post_format'] = 'post_format';
 		        $taxonomies 			   = wp_get_object_terms( $post_id, $taxonomies, array( 'fields' => 'ids' ) );
 		        foreach ( $fields['taxonomies'] as $taxonomy => $taxonomy_id ) {
-		            if ( $post_id && $taxonomy_id && has_term( $taxonomy_id, $taxonomy, $post_id ) ) {
-		                $init[ $optin->post_name ] = $html;
-		                $this->set_slug( $optin );
-                        continue 2;
-		            }
+			        $tax_ids = explode(',', $taxonomy_id[0] );
+			        foreach ( $tax_ids as $tax_id ) {
+				        if ( $post_id && $tax_id && has_term( $tax_id, $taxonomy, $post_id ) ) {
+					        $init[ $optin->post_name ] = $html;
+					        $this->set_slug( $optin );
+					        continue 2;
+				        }
+			        }
 		        }
 		    }
 

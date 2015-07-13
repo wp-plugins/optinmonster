@@ -109,7 +109,8 @@ class OMAPI_Ajax {
         $args		= array(
 	        'post_type' 	 => $post_types,
 	        's'		    	 => $search,
-	        'posts_per_page' => -1
+	        'posts_per_page' => -1,
+            'post_status'    => array( 'publish', 'future' ),
 	    );
 
         // Make the query.
@@ -201,7 +202,8 @@ class OMAPI_Ajax {
         $args = array(
 	        'post__in'		 => $ids,
 	        'posts_per_page' => -1,
-	        'post_type'      => get_post_types( array( 'public' => true ) )
+	        'post_type'      => get_post_types( array( 'public' => true ) ),
+            'post_status'    => array( 'publish', 'future' ),
 	    );
 
         // Make the query.
