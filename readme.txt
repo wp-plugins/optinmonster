@@ -147,6 +147,9 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
+= 1.1.2.1 =
+* Fixed issue for defining API url with function before filters can be applied to it.
+
 = 1.1.2 =
 * Fixed display error when multiple taxonomy terms were selected for an optin.
 * Added selection of scheduled posts in optin output settings.
