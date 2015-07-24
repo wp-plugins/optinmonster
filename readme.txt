@@ -147,6 +147,9 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
+= 1.1.2.2 =
+* Fixed issue with API script not grabbing checkbox and radio fields properly inside an optin.
+
 = 1.1.2.1 =
 * Fixed issue for defining API url with function before filters can be applied to it.
 
