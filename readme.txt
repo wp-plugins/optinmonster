@@ -147,6 +147,11 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
+= 1.1.2.3 =
+* Added support for a new optin type - full page takeovers!
+* Fixed a bug with embedded HubSpot forms.
+* Fixed bug where dropdown options would not show on Safari for post targeting.
+
 = 1.1.2.2 =
 * Fixed issue with API script not grabbing checkbox and radio fields properly inside an optin.
 

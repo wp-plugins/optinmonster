@@ -325,12 +325,12 @@ class OMAPI_Menu {
 
 				    case 'never' :
 				    	$val = is_array( $value ) ? implode( ',', $value ) : $value;
-				    	$ret = $this->get_custom_field( $setting, '<input type="hidden" value="' . $val . '" id="omapi-field-' . $setting . '" class="omapi-select-ajax" name="omapi[' . $id . '][' . $setting . ']" data-placeholder="' . esc_attr__( 'Type to search and select post(s)...', 'optin-monster-api' ) . '">', __( 'Never load optin on:', 'optin-monster-api' ), __( 'Never loads the optin on the selected posts.', 'optin-monster-api' ) );
+				    	$ret = $this->get_custom_field( $setting, '<input type="hidden" value="' . $val . '" id="omapi-field-' . $setting . '" class="omapi-select-ajax" name="omapi[' . $id . '][' . $setting . ']" data-placeholder="' . esc_attr__( 'Type to search and select post(s)...', 'optin-monster-api' ) . '">', __( 'Never load optin on:', 'optin-monster-api' ), __( 'Never loads the optin on the selected posts and/or pages.', 'optin-monster-api' ) );
 				    break 2;
 
 				    case 'only' :
 				    	$val = is_array( $value ) ? implode( ',', $value ) : $value;
-				    	$ret = $this->get_custom_field( $setting, '<input type="hidden" value="' . $val . '" id="omapi-field-' . $setting . '" class="omapi-select-ajax" name="omapi[' . $id . '][' . $setting . ']" data-placeholder="' . esc_attr__( 'Type to search and select post(s)...', 'optin-monster-api' ) . '">', __( 'Load optin exclusively on:', 'optin-monster-api' ), __( 'Loads the optin only on the selected posts.', 'optin-monster-api' ) );
+				    	$ret = $this->get_custom_field( $setting, '<input type="hidden" value="' . $val . '" id="omapi-field-' . $setting . '" class="omapi-select-ajax" name="omapi[' . $id . '][' . $setting . ']" data-placeholder="' . esc_attr__( 'Type to search and select post(s)...', 'optin-monster-api' ) . '">', __( 'Load optin exclusively on:', 'optin-monster-api' ), __( 'Loads the optin only on the selected posts and/or pages.', 'optin-monster-api' ) );
 				    break 2;
 
 				    case 'categories' :

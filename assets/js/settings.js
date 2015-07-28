@@ -106,7 +106,7 @@ jQuery(document).ready(function($){
     function omapiFormatResult(item){
 	    var markup = '';
         if ( item.title !== undefined ) {
-            markup += '<option value="' + item.id + '">' + item.title + '</option>';
+            markup += '<div value="' + item.id + '">' + item.title + '</div>';
         }
         return markup;
     }
