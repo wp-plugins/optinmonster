@@ -147,8 +147,12 @@ OptinMonster is the <a href="http://optinmonster.com" rel="friend" title="OptinM
 
 == Changelog ==
 
+= 1.1.2.4 =
+* Fixed bug with cookies and split tests.
+* Fixed bug with allowing split tests to be made primary.
+
 = 1.1.2.3 =
-* Added support for a new optin type - full page takeovers!
+* Added support for a new optin type - fullscreen optins!
 * Fixed a bug with embedded HubSpot forms.
 * Fixed bug where dropdown options would not show on Safari for post targeting.
 
